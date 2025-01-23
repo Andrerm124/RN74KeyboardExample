@@ -11,9 +11,12 @@
     "pod-install": "RCT_NEW_ARCH_ENABLED=1 npx pod-install"
   },
   "dependencies": {
+    "@stripe/stripe-react-native": "^0.41.0",
     "react": "18.2.0",
     "react-native": "0.74.2",
     "react-native-haptic-feedback": "^2.2.0",
+    "react-native-keyboard-controller": "^1.15.2",
+    "react-native-reanimated": "^3.16.7",
     "react-native-webview": "latest"
   },
   "devDependencies": {

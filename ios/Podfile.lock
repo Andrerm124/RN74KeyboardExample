@@ -935,7 +935,28 @@ PODS:
   - React-Mapbuffer (0.74.2):
     - glog
     - React-debug
-  - react-native-webview (13.10.3):
+  - react-native-keyboard-controller (1.15.2):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
+  - react-native-webview (13.13.1):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1185,14 +1206,151 @@ PODS:
     - React-logger (= 0.74.2)
     - React-perflogger (= 0.74.2)
     - React-utils (= 0.74.2)
-  - RNReactNativeHapticFeedback (2.2.0):
-    - RCT-Folly
+  - RNReactNativeHapticFeedback (2.3.3):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.01.01.00)
     - RCTRequired
     - RCTTypeSafety
     - React-Codegen
     - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
+    - Yoga
+  - RNReanimated (3.16.7):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - RNReanimated/reanimated (= 3.16.7)
+    - RNReanimated/worklets (= 3.16.7)
+    - Yoga
+  - RNReanimated/reanimated (3.16.7):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - RNReanimated/reanimated/apple (= 3.16.7)
+    - Yoga
+  - RNReanimated/reanimated/apple (3.16.7):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
+  - RNReanimated/worklets (3.16.7):
+    - DoubleConversion
+    - glog
+    - hermes-engine
+    - RCT-Folly (= 2024.01.01.00)
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Codegen
+    - React-Core
+    - React-debug
+    - React-Fabric
+    - React-featureflags
+    - React-graphics
+    - React-ImageManager
+    - React-NativeModulesApple
+    - React-RCTFabric
+    - React-rendererdebug
+    - React-utils
+    - ReactCommon/turbomodule/bridging
+    - ReactCommon/turbomodule/core
+    - Yoga
   - SocketRocket (0.7.0)
+  - Stripe (24.2.0):
+    - StripeApplePay (= 24.2.0)
+    - StripeCore (= 24.2.0)
+    - StripePayments (= 24.2.0)
+    - StripePaymentsUI (= 24.2.0)
+    - StripeUICore (= 24.2.0)
+  - stripe-react-native (0.41.0):
+    - React-Core
+    - Stripe (~> 24.2.0)
+    - StripeApplePay (~> 24.2.0)
+    - StripeFinancialConnections (~> 24.2.0)
+    - StripePayments (~> 24.2.0)
+    - StripePaymentSheet (~> 24.2.0)
+    - StripePaymentsUI (~> 24.2.0)
+  - StripeApplePay (24.2.0):
+    - StripeCore (= 24.2.0)
+  - StripeCore (24.2.0)
+  - StripeFinancialConnections (24.2.0):
+    - StripeCore (= 24.2.0)
+    - StripeUICore (= 24.2.0)
+  - StripePayments (24.2.0):
+    - StripeCore (= 24.2.0)
+    - StripePayments/Stripe3DS2 (= 24.2.0)
+  - StripePayments/Stripe3DS2 (24.2.0):
+    - StripeCore (= 24.2.0)
+  - StripePaymentSheet (24.2.0):
+    - StripeApplePay (= 24.2.0)
+    - StripeCore (= 24.2.0)
+    - StripePayments (= 24.2.0)
+    - StripePaymentsUI (= 24.2.0)
+  - StripePaymentsUI (24.2.0):
+    - StripeCore (= 24.2.0)
+    - StripePayments (= 24.2.0)
+    - StripeUICore (= 24.2.0)
+  - StripeUICore (24.2.0):
+    - StripeCore (= 24.2.0)
   - Yoga (0.0.0)
 
 DEPENDENCIES:
@@ -1228,6 +1386,7 @@ DEPENDENCIES:
   - React-jsitracing (from `../node_modules/react-native/ReactCommon/hermes/executor/`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - React-Mapbuffer (from `../node_modules/react-native/ReactCommon`)
+  - react-native-keyboard-controller (from `../node_modules/react-native-keyboard-controller`)
   - react-native-webview (from `../node_modules/react-native-webview`)
   - React-nativeconfig (from `../node_modules/react-native/ReactCommon`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
@@ -1253,11 +1412,21 @@ DEPENDENCIES:
   - React-utils (from `../node_modules/react-native/ReactCommon/react/utils`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNReactNativeHapticFeedback (from `../node_modules/react-native-haptic-feedback`)
+  - RNReanimated (from `../node_modules/react-native-reanimated`)
+  - "stripe-react-native (from `../node_modules/@stripe/stripe-react-native`)"
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
     - SocketRocket
+    - Stripe
+    - StripeApplePay
+    - StripeCore
+    - StripeFinancialConnections
+    - StripePayments
+    - StripePaymentSheet
+    - StripePaymentsUI
+    - StripeUICore
 
 EXTERNAL SOURCES:
   boost:
@@ -1321,6 +1490,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   React-Mapbuffer:
     :path: "../node_modules/react-native/ReactCommon"
+  react-native-keyboard-controller:
+    :path: "../node_modules/react-native-keyboard-controller"
   react-native-webview:
     :path: "../node_modules/react-native-webview"
   React-nativeconfig:
@@ -1371,6 +1542,10 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNReactNativeHapticFeedback:
     :path: "../node_modules/react-native-haptic-feedback"
+  RNReanimated:
+    :path: "../node_modules/react-native-reanimated"
+  stripe-react-native:
+    :path: "../node_modules/@stripe/stripe-react-native"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -1405,15 +1580,16 @@ SPEC CHECKSUMS:
   React-jsitracing: 0fa7f78d8fdda794667cb2e6f19c874c1cf31d7e
   React-logger: 29fa3e048f5f67fe396bc08af7606426d9bd7b5d
   React-Mapbuffer: bf56147c9775491e53122a94c423ac201417e326
-  react-native-webview: 6f26c6733ccbdd7ddd0e26dae62551d6955b5a6d
+  react-native-keyboard-controller: f34087e746c41e7452d2270ee116f262d0dcc531
+  react-native-webview: 6bda09cc1b0685a54b6b034c40e4c7b6d7b796a3
   React-nativeconfig: 9f223cd321823afdecf59ed00861ab2d69ee0fc1
   React-NativeModulesApple: ff7efaff7098639db5631236cfd91d60abff04c0
   React-perflogger: 32ed45d9cee02cf6639acae34251590dccd30994
   React-RCTActionSheet: 19f967ddaea258182b56ef11437133b056ba2adf
   React-RCTAnimation: d7f4137fc44a08bba465267ea7cb1dbdb7c4ec87
-  React-RCTAppDelegate: dca95e1a6194f7ae06c2b5f1d5f891c61af00ec8
+  React-RCTAppDelegate: 2b3f4d8009796af209a0d496e73276b743acee08
   React-RCTBlob: c6c3e1e0251700b7bea036b893913f22e2b9cb47
-  React-RCTFabric: a7874c54aea18f64677446efc5f839ec4fa5e931
+  React-RCTFabric: 93a3ea55169d19294f07092013c1c9ea7a015c9b
   React-RCTImage: 40528ab74a4fef0f0e2ee797a074b26d120b6cc6
   React-RCTLinking: 385b5beb96749aae9ae1606746e883e1c9f8a6a7
   React-RCTNetwork: ffc9f05bd8fa5b3bce562199ba41235ad0af645c
@@ -1429,10 +1605,20 @@ SPEC CHECKSUMS:
   React-runtimescheduler: 56b642bf605ba5afa500d35790928fc1d51565ad
   React-utils: 4476b7fcbbd95cfd002f3e778616155241d86e31
   ReactCommon: ecad995f26e0d1e24061f60f4e5d74782f003f12
-  RNReactNativeHapticFeedback: 616c35bdec7d20d4c524a7949ca9829c09e35f37
+  RNReactNativeHapticFeedback: 7c701396d35a0e8863d8d8f97a7273c5f8509b40
+  RNReanimated: b0728bed09875d78b9a3a0ba0e2d1171f63f8b5a
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
+  Stripe: be805dc0e80a7299de7b10ecbe01ce81412654c8
+  stripe-react-native: 01b57a63afbe42b57f24cebdde78eff3d602148b
+  StripeApplePay: 5233ecff535bb0772785d2d18d02b39ec24ecb71
+  StripeCore: e2f70fcaa82e5a9d44d18fe4534358384cdf4821
+  StripeFinancialConnections: 8c8e2273552d4567ec381ee2b0ff1745b8e11ab6
+  StripePayments: beb97f8061066532744ceaa03e59009c9716332e
+  StripePaymentSheet: 0d8ed5270037b1da3eb107c9876cec67b8b1fe43
+  StripePaymentsUI: 6486d8b86bf49b8932506807a8692ce16e9f109d
+  StripeUICore: b59aa9c9e202b6a03a556c3519eff578274f7598
   Yoga: ae3c32c514802d30f687a04a6a35b348506d411f
 
 PODFILE CHECKSUM: 1c4e026adaf98107bcfb0e5b837b08dd576f4a5c
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.13.0

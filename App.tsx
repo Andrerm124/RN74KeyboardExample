@@ -5,18 +5,24 @@
  * @format
  */
 
+import { CardField } from '@stripe/stripe-react-native';
+import type { PropsWithChildren } from 'react';
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
   StyleSheet,
   Text,
+  TextInput,
   useColorScheme,
   View,
 } from 'react-native';
 
+import {
+  KeyboardAwareScrollView,
+  KeyboardProvider,
+} from 'react-native-keyboard-controller';
 import {
   Colors,
   DebugInstructions,
@@ -24,12 +30,6 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import WebView from 'react-native-webview';
-import {
-  WebViewErrorEvent,
-  WebViewNavigationEvent,
-} from 'react-native-webview/lib/WebViewTypes';
-import {AttachmentProcessor} from './src/native-modules';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -68,56 +68,54 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  const handleLoad = (e: WebViewErrorEvent | WebViewNavigationEvent) => {
-    // @ts-ignore
-    const {target: nativeTag} = e.nativeEvent;
-    console.log('nativeTag:', nativeTag, typeof AttachmentProcessor);
-    if (AttachmentProcessor) {
-      AttachmentProcessor.process(nativeTag);
-    }
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <WebView
+    <KeyboardProvider>
+      <SafeAreaView style={backgroundStyle}>
+        <StatusBar
+          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+          backgroundColor={backgroundStyle.backgroundColor}
+        />
+        <KeyboardAwareScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={backgroundStyle}>
+          <Header />
+          <View
             style={{
-              height: 300,
-              flex: 1,
-            }}
-            source={{
-              uri: 'https://www.craftz.dog/',
-            }}
-            onLoad={handleLoad}
+              backgroundColor: isDarkMode ? Colors.black : Colors.white,
+            }}>
+            <Section title="Step One">
+              Edit <Text style={styles.highlight}>App.tsx</Text> to change this
+              screen and then come back to see your edits.
+            </Section>
+            <Section title="See Your Changes">
+              <ReloadInstructions />
+            </Section>
+            <Section title="Debug">
+              <DebugInstructions />
+            </Section>
+            <Section title="Learn More">
+              Read the docs to discover what to do next:
+            </Section>
+            <LearnMoreLinks />
+          </View>
+
+          <TextInput
+            placeholder="Focus is detected here"
+            style={{width: '100%', height: 50, borderWidth: 1}}
           />
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+
+          <ScrollView horizontal>
+            <TextInput
+              placeholder="Focus is not detected here"
+              style={{width: '100%', height: 50, borderWidth: 1}}
+            />
+          </ScrollView>
+
+          {/* Example of a native input not having focus detected */}
+          <CardField style={{width: '100%', height: 50, borderWidth: 1}} />
+        </KeyboardAwareScrollView>
+      </SafeAreaView>
+    </KeyboardProvider>
   );
 }
 
