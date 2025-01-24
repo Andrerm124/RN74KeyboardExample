@@ -5,9 +5,9 @@
  * @format
  */
 
-import { CardField } from '@stripe/stripe-react-native';
+import { CardField, initStripe } from '@stripe/stripe-react-native';
 import type { PropsWithChildren } from 'react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -63,10 +63,17 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+  const [isStripeReady, setIsStripeReady] = useState(false);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  useEffect(() => {
+    initStripe({publishableKey: 'foo'}).then(() => {
+      setIsStripeReady(true);
+    });
+  }, []);
 
   return (
     <KeyboardProvider>
@@ -112,7 +119,9 @@ function App(): React.JSX.Element {
           </ScrollView>
 
           {/* Example of a native input not having focus detected */}
-          <CardField style={{width: '100%', height: 50, borderWidth: 1}} />
+          {isStripeReady && (
+            <CardField style={{width: '100%', height: 50, borderWidth: 1}} />
+          )}
         </KeyboardAwareScrollView>
       </SafeAreaView>
     </KeyboardProvider>
